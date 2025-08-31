@@ -1,5 +1,7 @@
 # Change Detection in Satellite Images  
-
+---
+## Objective
+The aim of this project is to construct and evaluate a new deep learning architecture that surpasses the current baseline deep learning models both in metrics and in benchmark tests using Earth Remote Sensing Change Detection (ERSCD) data. Using novel architectural improvements, sophisticated optimization methods, and custom loss functions designed for imbalanced data, the goal is to improve precision, recall, F1 score, and IoU on all standard benchmarking datasets.
 ## Technologies and Tools Used  
 - Python (TensorFlow / Keras)  
 - Jupyter Notebooks (`.ipynb`)  
@@ -99,8 +101,6 @@ The table below shows the comparison in terms of **Kappa, F1, IoU, Precision, an
 ---
 ##  References  
 
-These models are grounded in the following foundational works:  
-
 - **Peng et al. (2019)** – *End-to-End Change Detection for High-Resolution Satellite Images Using Improved UNet++*, Remote Sensing, 11(11): 1382.  
   [[Paper Link](https://www.mdpi.com/2072-4292/11/11/1382/notes?utm_source=chatgpt.com)]  
 - **IEEE publications** for the other models include:  
@@ -109,13 +109,6 @@ These models are grounded in the following foundational works:
   - **ECFNet** – IEEE Xplore ID: [10023508](https://ieeexplore.ieee.org/document/10023508)  
   - **SEIFNet** – IEEE Xplore ID: [10419228](https://ieeexplore.ieee.org/document/10419228)
 ---
-
-
-
-
-
-
-
 
 
 
