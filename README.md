@@ -65,7 +65,7 @@
 <p align="center">
   <img src="images/unet++new.png" alt="UNet++ Results" width="800"/>
  <p>
-  <p>
+  <p align="center">
   <img src="images/other.png" alt="Other Models Results" width="800"/>
 </p>
 
