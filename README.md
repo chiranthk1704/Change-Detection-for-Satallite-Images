@@ -63,10 +63,10 @@
 ##  Visualization of Results
 
 <p align="center">
-  <img src="unet++new.png" alt="UNet++ Results" width="800"/>
+  <img src="images/unet++new.png" alt="UNet++ Results" width="800"/>
  <p>
   <p>
-  <img src="other.png" alt="Other Models Results" width="800"/>
+  <img src="images/other.png" alt="Other Models Results" width="800"/>
 </p>
 
 ---
