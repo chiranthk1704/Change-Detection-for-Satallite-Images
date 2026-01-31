@@ -66,11 +66,9 @@ The aim of this project is to construct and evaluate a new deep learning archite
 ##  Visualization of Results
 
 <p align="center">
-  <img src="images/unet++new.png" alt="UNet++ Results" width="800"/>
+  <img src="images/liverCD.png" alt="Results on LiverCD Dataset" width="800"/>
  <p>
-  <p align="center">
-  <img src="images/other.png" alt="Other Models Results" width="800"/>
-</p>
+
 
 ---
 ##  Experimental Results
