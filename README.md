@@ -110,4 +110,5 @@ The table below shows the comparison in terms of **Kappa, F1, IoU, Precision, an
 ---
 
 
+Note: The proposed model and detailed methodology are currently under review at IEEE JSTARS. Full implementation details and experimental results will be released after publication.
 
