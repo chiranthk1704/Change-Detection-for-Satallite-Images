@@ -1,4 +1,5 @@
 # Change Detection in Satellite Images  
+Note: The proposed model and detailed methodology are currently under review at IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. Full implementation details and experimental results will be released after publication.
 ---
 ## Objective
 The aim of this project is to construct and evaluate a new deep learning architecture that surpasses the current baseline deep learning models both in metrics and in benchmark tests using Earth Remote Sensing Change Detection (ERSCD) data. Using novel architectural improvements, sophisticated optimization methods, and custom loss functions designed for imbalanced data, the goal is to improve precision, recall, F1 score, and IoU on all standard benchmarking datasets.
@@ -109,5 +110,5 @@ The table below shows the comparison in terms of **Kappa, F1, IoU, Precision, an
 ---
 
 
-Note: The proposed model and detailed methodology are currently under review at IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. Full implementation details and experimental results will be released after publication.
+
 
