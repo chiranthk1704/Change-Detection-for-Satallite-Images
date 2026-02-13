@@ -15,19 +15,19 @@ The implementations provided here serve as strong baselines for comparative eval
 
 The following state-of-the-art architectures have been implemented and benchmarked:
 
-- UNet++
-- AGCDetNet
-- UCDNet
-- ECFNet
-- SEIFNet
-- ERSCDNet
-- EGCDNet
-- MSNet
+- UNet++ [1]
+- AGCDetNet [2]
+- UCDNet [3]
+- ECFNet [4]
+- SEIFNet [5]
+- ERSCDNet [6]
+- EGCDNet [7]
+- MSNet [8]
 
 
 ## Datasets
 
-### EGY-BCD Dataset
+### EGY-BCD Dataset [Link](https://ieeexplore.ieee.org/document/10145434)
 
 - 6091 bi-temporal image pairs  
 - Resolution: 256 × 256  
@@ -37,7 +37,7 @@ The following state-of-the-art architectures have been implemented and benchmark
 A resized subset (512 × 512) was used for experimentation.
 
 
-### LEVIR-CD Dataset
+### LEVIR-CD Dataset [Link](https://www.mdpi.com/2072-4292/12/10/1662)
 
 - 637 high-resolution bi-temporal image pairs  
 - Spatial resolution: 0.5 m/pixel  
@@ -111,22 +111,32 @@ All models are evaluated using:
 
 ## References
 
-[1] D. Peng, Y. Zhang, and H. Guan, “End-to-end change detection for high resolution satellite images using improved UNet++,” Remote Sensing, vol. 11, no. 11, 2019.
+[1] D. Peng, Y. Zhang, and H. Guan, “End-to-end change detection for high resolution satellite images using improved UNet++,” Remote Sensing, vol. 11, no. 11, 2019. [Paper Link](https://www.mdpi.com/2072-4292/11/11/1382)
 
-[2] K. Song and J. Jiang, “AGCDetNet: An attention-guided network for building change detection in high-resolution remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2021.
 
-[3] K. S. Basavaraju et al., “UCDNet: A deep learning model for urban change detection from bi-temporal multispectral Sentinel-2 satellite images,” IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1–10, 2022.
+[2] K. Song and J. Jiang, “AGCDetNet: An attention-guided network for building change detection in high-resolution remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2021. [Paper Link](https://ieeexplore.ieee.org/document/9423508/)
 
-[4] S. Zhu et al., “ECFNet: A siamese network with fewer FPs and fewer FNs for change detection of remote-sensing images,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023.
 
-[5] Y. Huang et al., “Spatiotemporal enhancement and interlevel fusion network for remote sensing image change detection,” IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024.
+[3] K. S. Basavaraju et al., “UCDNet: A deep learning model for urban change detection from bi-temporal multispectral Sentinel-2 satellite images,” IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1–10, 2022. [Paper Link](https://ieeexplore.ieee.org/document/9740122)
 
-[6] S. N et al., “A robust CNN framework for change detection analysis from bitemporal remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 17, pp. 12637–12648, 2024.
 
-[7] C. You et al., “High-resolution remote sensing change detection with edge-guided feature enhancement,” IEEE Geoscience and Remote Sensing Letters, vol. 22, 2025.
+[4] S. Zhu et al., “ECFNet: A siamese network with fewer FPs and fewer FNs for change detection of remote-sensing images,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023. [Paper Link](https://ieeexplore.ieee.org/document/10023508)
 
-[8] S. Liu et al., “Network and dataset for multiscale remote sensing image change detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025.
 
-[9] H. Chen and Z. Shi, “A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection,” Remote Sensing, vol. 12, p. 1662, 2020.
+[5] Y. Huang et al., “Spatiotemporal enhancement and interlevel fusion network for remote sensing image change detection,” IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024. [Paper Link](https://ieeexplore.ieee.org/document/10419228)
 
-[10] S. Holail et al., “AFDE-Net: Building change detection using attention-based feature differential enhancement for satellite imagery,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023.
+
+[6] S. N et al., “A robust CNN framework for change detection analysis from bitemporal remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 17, pp. 12637–12648, 2024. [Paper Link](https://ieeexplore.ieee.org/document/10584262)
+
+
+[7] C. You et al., “High-resolution remote sensing change detection with edge-guided feature enhancement,” IEEE Geoscience and Remote Sensing Letters, vol. 22, 2025. [Paper Link](https://ieeexplore.ieee.org/document/10945436)
+
+
+[8] S. Liu et al., “Network and dataset for multiscale remote sensing image change detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [Paper Link](https://ieeexplore.ieee.org/document/10813409)
+
+
+[9] H. Chen and Z. Shi, “A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection,” Remote Sensing, vol. 12, p. 1662, 2020. [Paper Link](https://doi.org/xxxxx)
+
+
+[10] S. Holail et al., “AFDE-Net: Building change detection using attention-based feature differential enhancement for satellite imagery,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023. [Paper Link](https://doi.org/xxxxx)
+
