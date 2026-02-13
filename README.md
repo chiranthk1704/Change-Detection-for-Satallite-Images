@@ -1,114 +1,140 @@
-# Change Detection in Satellite Images  
-Note: The proposed model and detailed methodology are currently under review at IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. Full implementation details and experimental results will be released after publication.
----
-## Objective
-The aim of this project is to construct and evaluate a new deep learning architecture that surpasses the current baseline deep learning models both in metrics and in benchmark tests using Earth Remote Sensing Change Detection (ERSCD) data. Using novel architectural improvements, sophisticated optimization methods, and custom loss functions designed for imbalanced data, the goal is to improve precision, recall, F1 score, and IoU on all standard benchmarking datasets.
-## Technologies and Tools Used  
-- Python (TensorFlow / Keras)  
-- Jupyter Notebooks (`.ipynb`)  
-- Deep Learning models for Change Detection  
-- Git & GitHub for version control  
+Change Detection in Bi-Temporal Satellite Images
+Overview
 
----
+This repository focuses on bi-temporal satellite image change detection using deep learning techniques.
 
-## Features of the Work  
+The primary objective of this project is to design and develop a novel architecture capable of outperforming existing state-of-the-art (SOTA) models on standard change detection benchmarks. To ensure meaningful comparison, several leading architectures have been carefully implemented and evaluated under consistent experimental settings.
 
-- Implemented **six state-of-the-art models** for **bi-temporal satellite image change detection**.  
-- Each model is implemented as a **separate Jupyter Notebook**, focusing on architectural details from the original research papers.  
-- Evaluations include **Accuracy, Precision, Recall, F1-score, IoU, and Cohen’s Kappa**.  
-- Tested primarily on the **LEVIR-CD dataset** for building and land-use change detection.  
-- Organized results for easy understanding and comparison between different models.  
+The proposed model developed in this work is currently under review at the IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE JSTARS). Full architectural details and implementation will be released after the review process is completed.
 
----
- ## Implemented Models for Change Detection :
+The implementations included here serve as strong baselines for comparison.
 
-- **Improved UNet++ – End-to-End Change Detection for High-Resolution Satellite Images**  
-  - Based on *Peng et al. [2]*, extending UNet++ for change detection by treating image pairs as multi-channel inputs.  
-  - Introduces **Multiple Side Output Fusion (MSOF)** for combining predictions from different semantic levels.  
-  - Captures both **local fine changes** and **global structural shifts**, reducing false positives.  
-  - **Limitation**: Struggles with very small-scale or subtle changes in high-resolution imagery.  
+Implemented Models
 
-- **AGCDetNet – Attention-Guided Network for Building Change Detection**  
-  - Inspired by *Rustamov et al. [3]*, designed for **building-level change detection**.  
-  - Employs **Spatial Pixel-level Attention Module (SPAM)** to emphasize change-related features.  
-  - Uses **Cross-scale Feature Integration Unit (CIFU)** and **Context-Guided ASPP (CG-ASPP)** for robust multi-scale learning.  
-  - **Strength**: Excels in complex **urban environments**.  
-  - **Weakness**: Performance drops on medium/low-resolution imagery.  
+The following state-of-the-art architectures have been implemented and benchmarked:
 
-- **UCDNet – Deep Learning Model for Urban Change Detection**  
-  - From *Basavaraju et al. [5]*, designed for **urban monitoring with Sentinel-2 data**.  
-  - Siamese encoder–decoder with **Modified Residual Connections** for stability.  
-  - Adds **New Spatial Pyramid Pooling (NSPP)** for multi-scale urban structure detection.  
-  - Uses a **hybrid loss** (Weighted Cross-Entropy + Modified Kappa Loss) to reduce FP/FN.  
-  - Highly effective for **urban change detection tasks**.  
+UNet++
 
-- **ECFNet – Siamese Network with Fewer False Positives/Negatives**  
-  - From *Liu et al. [6]*, also called **Edge-Conditioned Feature Fusion Network**.  
-  - Integrates **auxiliary edge detection** for preserving boundaries.  
-  - Performs **dual-stage fusion** of semantic + edge features for sharper predictions.  
-  - Strong in **boundary-sensitive areas** like roads and buildings.  
-  - **Trade-off**: Higher computational demand.  
+AGCDetNet
 
-- **SEIFNet – Spatiotemporal Enhancement and Interlevel Fusion Network**  
-  - Proposed by *Zhang et al. [7]*, also known as **Semantic Edge Information Fusion Network**.  
-  - Runs **parallel semantic + edge branches** to capture both context and structure.  
-  - Uses a **Feature Aggregation Module (FAM)** to refine predictions and suppress noise.  
-  - **Advantage**: Reduces **false alarms and over-detection**.  
-  - **Limitation**: Needs **high-quality edge supervision**.  
+UCDNet
 
-- **Robust CNN Framework – Baseline for Bi-temporal Change Detection**  
-  - Based on *Daudt et al. [1]*, introducing **FC-Siam-conc** and **FC-Siam-diff** models.  
-  - Siamese encoders merge temporal features via **concatenation** or **differencing**.  
-  - Retains **fine spatial localization** with skip connections.  
-  - Provided the **first strong CNN baseline** for bi-temporal change detection.  
-  - **Weakness**: Struggles with **complex semantics** and **subtle changes**.  
----
-##  Visualization of Results
+ECFNet
 
-<p align="center">
-  <img src="images/liverCD.png" alt="Results on LiverCD Dataset" width="800"/>
- <p>
+SEIFNet
 
+ERSCDNet
 
----
-##  Experimental Results
+EGCDNet
 
-We evaluated multiple state-of-the-art change detection models on the LEVIR-CD dataset.  
-The table below shows the comparison in terms of **Kappa, F1, IoU, Precision, and Recall**:
+MSNet
 
-| Method     | Kappa (%) | F1 (%) | IoU (%) | Precision (%) | Recall (%) |
-|------------|-----------|--------|---------|---------------|------------|
-| UNet++     | 78        | 79     | 65      | 91            | 70         |
-| AGCDetNet  | 78        | 80     | 66      | 81            | 78         |
-| UCDNet     | 85        | 85     | 75      | 86            | 84         |
-| ECFNet     | 81        | 80     | 69      | 81            | 82         |
-| SEIF-Net   | 83        | 84     | 72      | 87            | 80         |
-| ERSCD-Net  | **89**    | **89** | **81**  | 87            | **92**     |
+Each model follows the structure and training methodology described in its original publication. The goal is faithful reproduction and fair evaluation.
 
-**ERSCD-Net achieved the best performance**, outperforming others in Kappa, F1, IoU, and Recall.
+Datasets
+EGY-BCD Dataset
 
----
+Total image pairs: 6091
 
-##  Dataset  
+Original resolution: 256 × 256
 
-- **LEVIR-CD**: Large-scale remote sensing dataset for change detection.  
-  - 637 pairs of **1024×1024** bitemporal images (Google Earth, 2002–2018).  
-  - 5% of pixels represent **changed areas** (foreground).  
-  - Highly imbalanced → requires tailored loss functions.  
+Regions:
 
- Dataset link: [LEVIR-CD on Kaggle](https://www.kaggle.com/datasets/mdrifaturrahman33/levir-cd)  
----
-##  References  
+New Mansoura
 
-- **Peng et al. (2019)** – *End-to-End Change Detection for High-Resolution Satellite Images Using Improved UNet++*, Remote Sensing, 11(11): 1382.  
-  [[Paper Link](https://www.mdpi.com/2072-4292/11/11/1382/notes?utm_source=chatgpt.com)]  
-- **IEEE publications** for the other models include:  
-  - **AGCDetNet** – IEEE Xplore ID: [9423508](https://ieeexplore.ieee.org/document/9423508)  
-  - **UCDNet** – IEEE Xplore ID: [9740122](https://ieeexplore.ieee.org/document/9740122)  
-  - **ECFNet** – IEEE Xplore ID: [10023508](https://ieeexplore.ieee.org/document/10023508)  
-  - **SEIFNet** – IEEE Xplore ID: [10419228](https://ieeexplore.ieee.org/document/10419228)
----
+El Falala City
 
+New Cairo
 
+New Thebes
 
+Each sample consists of a bi-temporal image pair and a corresponding binary ground-truth change mask.
 
+For experimentation:
+
+2000 image pairs randomly selected
+
+Resized to 512 × 512
+
+Split into Train / Validation / Test with a 7:1:2 ratio
+
+LEVIR-CD Dataset
+
+637 high-resolution image pairs
+
+Spatial resolution: 0.5 meters per pixel
+
+Original patch size: 1024 × 1024
+
+Focus: building and structural change detection
+
+For training consistency:
+
+Patched into 512 × 512
+
+Final split:
+
+1776 training samples
+
+256 validation samples
+
+512 test samples
+
+Split ratio: 7:1:2
+
+This dataset is highly imbalanced, with only a small fraction of pixels representing changed regions.
+
+Evaluation Metrics
+
+All models are evaluated using:
+
+Precision
+
+Recall
+
+F1 Score
+
+Intersection over Union (IoU)
+
+Cohen’s Kappa
+
+Overall Accuracy
+
+Number of Parameters (Millions)
+
+Average Prediction Time per Image (seconds)
+
+These metrics provide both accuracy and efficiency comparisons.
+
+Experimental Results
+EGY-BCD Dataset
+Model	Precision	Recall	F1	Kappa	IoU	Accuracy	Params (M)	Avg Time (s)
+UNet++	0.4210	0.7465	0.5310	0.4116	0.3615	0.7924	4.9	0.6889
+AGCDetNet	0.8084	0.7656	0.7864	0.7749	0.6480	0.9782	48.1	0.8272
+UCDNet	0.4234	0.7278	0.5353	0.3979	0.3655	0.7719	1.3	0.6699
+ECFNet	0.6757	0.8083	0.7361	0.6735	0.5824	0.8573	24.6	0.6236
+SEIFNet	0.7782	0.7615	0.7698	0.7197	0.6257	0.9178	19.8	0.7280
+ERSCDNet	0.6825	0.7975	0.7355	0.6815	0.5817	0.9097	1.1	0.6355
+EGCDNet	0.7768	0.7191	0.7468	0.6937	0.5959	0.9022	71.7	0.6997
+MSNet	0.6728	0.6179	0.6442	0.5698	0.4751	0.8722	10.1	0.6952
+LEVIR-CD Dataset (Three Bands)
+Model	Precision	Recall	F1	Kappa	IoU	Accuracy	Params (M)	Avg Time (s)
+UNet++	0.9133	0.7028	0.7943	0.7845	0.6588	0.9809	4.9	0.6870
+AGCDetNet	0.8166	0.7852	0.8006	0.7898	0.6675	0.9795	48.1	0.6120
+UCDNet	0.8697	0.8472	0.8583	0.8508	0.7517	0.9803	1.3	0.6715
+ECFNet	0.8393	0.8236	0.8313	0.8189	0.7114	0.9811	24.6	0.7426
+SEIFNet	0.8568	0.7999	0.8274	0.8181	0.7056	0.9178	19.8	0.6791
+ERSCDNet	0.8624	0.9300	0.8949	0.8889	0.8090	0.9885	1.1	0.5869
+EGCDNet	0.8286	0.8298	0.8242	0.8143	0.7009	0.9868	71.7	0.6217
+MSNet	0.8443	0.8048	0.8241	0.8148	0.7008	0.9715	10.1	0.6639
+Qualitative Results
+
+You may insert a visual comparison here showing:
+
+T1 image
+
+T2 image
+
+Ground truth
+
+Predictions from each model
