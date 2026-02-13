@@ -6,7 +6,7 @@ This repository focuses on bi-temporal satellite image change detection using de
 
 The primary objective of this project is to design and develop a novel architecture capable of outperforming existing state-of-the-art (SOTA) models on standard change detection benchmarks. To establish a fair comparison, several leading architectures have been implemented and evaluated under consistent experimental settings.
 
-The proposed model developed in this work is currently under review at the IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE JSTARS). Full architectural details and implementation will be released after the review process is completed.
+**The proposed model developed in this work is currently under review at the IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE JSTARS). Full architectural details and implementation will be released after the review process is completed.**
 
 The implementations provided here serve as strong baselines for comparative evaluation.
 
