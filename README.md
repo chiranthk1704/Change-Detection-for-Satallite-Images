@@ -135,8 +135,4 @@ All models are evaluated using:
 [8] S. Liu et al., “Network and dataset for multiscale remote sensing image change detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025. [Paper Link](https://ieeexplore.ieee.org/document/10813409)
 
 
-[9] H. Chen and Z. Shi, “A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection,” Remote Sensing, vol. 12, p. 1662, 2020. [Paper Link](https://doi.org/xxxxx)
-
-
-[10] S. Holail et al., “AFDE-Net: Building change detection using attention-based feature differential enhancement for satellite imagery,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023. [Paper Link](https://doi.org/xxxxx)
 
