@@ -4,11 +4,11 @@
 
 This repository focuses on bi-temporal satellite image change detection using deep learning techniques.
 
-The primary objective of this project is to design and develop a novel architecture capable of outperforming existing state-of-the-art (SOTA) models on standard change detection benchmarks. To ensure meaningful comparison, several leading architectures have been carefully implemented and evaluated under consistent experimental settings.
+The primary objective of this project is to design and develop a novel architecture capable of outperforming existing state-of-the-art (SOTA) models on standard change detection benchmarks. To establish a fair comparison, several leading architectures have been implemented and evaluated under consistent experimental settings.
 
 The proposed model developed in this work is currently under review at the IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE JSTARS). Full architectural details and implementation will be released after the review process is completed.
 
-The implementations included here serve as strong baselines for comparison.
+The implementations provided here serve as strong baselines for comparative evaluation.
 
 
 ## Implemented Models
@@ -24,63 +24,40 @@ The following state-of-the-art architectures have been implemented and benchmark
 - EGCDNet
 - MSNet
 
-Each model follows the structure and training methodology described in its original publication. The goal is faithful reproduction and fair evaluation.
-
 
 ## Datasets
 
 ### EGY-BCD Dataset
 
-- Total image pairs: 6091
-- Original resolution: 256 × 256
-- Regions:
-  - New Mansoura
-  - El Falala City
-  - New Cairo
-  - New Thebes
+- 6091 bi-temporal image pairs  
+- Resolution: 256 × 256  
+- Regions: New Mansoura, El Falala City, New Cairo, New Thebes  
+- Each pair includes a binary change mask  
 
-Each sample consists of a bi-temporal image pair and a corresponding binary ground-truth change mask.
-
-For experimentation:
-
-- 2000 image pairs randomly selected
-- Resized to 512 × 512
-- Split into Train / Validation / Test with a 7:1:2 ratio
+A resized subset (512 × 512) was used for experimentation.
 
 
 ### LEVIR-CD Dataset
 
-- 637 high-resolution image pairs
-- Spatial resolution: 0.5 meters per pixel
-- Original patch size: 1024 × 1024
-- Focus: building and structural change detection
+- 637 high-resolution bi-temporal image pairs  
+- Spatial resolution: 0.5 m/pixel  
+- Focus: building and structural change detection  
 
-For training consistency:
-
-- Patched into 512 × 512
-- Final split:
-  - 1776 training samples
-  - 256 validation samples
-  - 512 test samples
-- Split ratio: 7:1:2
-
-This dataset is highly imbalanced, with only a small fraction of pixels representing changed regions.
+Images were patched to 512 × 512 for training and evaluation.
 
 
 ## Evaluation Metrics
 
 All models are evaluated using:
 
-- Precision
-- Recall
-- F1 Score
-- Intersection over Union (IoU)
-- Cohen’s Kappa
-- Overall Accuracy
-- Number of Parameters (Millions)
-- Average Prediction Time per Image (seconds)
-
-These metrics provide both accuracy and efficiency comparisons.
+- Precision  
+- Recall  
+- F1 Score  
+- Intersection over Union (IoU)  
+- Cohen’s Kappa  
+- Overall Accuracy  
+- Number of Parameters (Millions)  
+- Average Prediction Time per Image (seconds)  
 
 
 # Experimental Results
@@ -113,34 +90,24 @@ These metrics provide both accuracy and efficiency comparisons.
 | MSNet      | 0.8443     | 0.8048 | 0.8241 | 0.8148 | 0.7008 | 0.9715   | 10.1       | 0.6639       |
 
 
-## Qualitative Results
-
-Add your comparison image here, for example:
-
-![Qualitative Comparison](results/comparison_example.png)
-
-
-## Requirements
-
-- Python 3.x
-- TensorFlow / Keras
-- NumPy
-- OpenCV
-- Matplotlib
-- Scikit-learn
-
-
 ## References
 
-Add full IEEE-formatted citations for:
+[1] D. Peng, Y. Zhang, and H. Guan, “End-to-end change detection for high resolution satellite images using improved UNet++,” Remote Sensing, vol. 11, no. 11, 2019.
 
-- UNet++
-- AGCDetNet
-- UCDNet
-- ECFNet
-- SEIFNet
-- ERSCDNet
-- EGCDNet
-- MSNet
-- EGY-BCD Dataset
-- LEVIR-CD Dataset
+[2] K. Song and J. Jiang, “AGCDetNet: An attention-guided network for building change detection in high-resolution remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2021.
+
+[3] K. S. Basavaraju et al., “UCDNet: A deep learning model for urban change detection from bi-temporal multispectral Sentinel-2 satellite images,” IEEE Transactions on Geoscience and Remote Sensing, vol. 60, pp. 1–10, 2022.
+
+[4] S. Zhu et al., “ECFNet: A siamese network with fewer FPs and fewer FNs for change detection of remote-sensing images,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023.
+
+[5] Y. Huang et al., “Spatiotemporal enhancement and interlevel fusion network for remote sensing image change detection,” IEEE Transactions on Geoscience and Remote Sensing, vol. 62, 2024.
+
+[6] S. N et al., “A robust CNN framework for change detection analysis from bitemporal remote sensing images,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 17, pp. 12637–12648, 2024.
+
+[7] C. You et al., “High-resolution remote sensing change detection with edge-guided feature enhancement,” IEEE Geoscience and Remote Sensing Letters, vol. 22, 2025.
+
+[8] S. Liu et al., “Network and dataset for multiscale remote sensing image change detection,” IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 2025.
+
+[9] H. Chen and Z. Shi, “A Spatial-Temporal Attention-Based Method and a New Dataset for Remote Sensing Image Change Detection,” Remote Sensing, vol. 12, p. 1662, 2020.
+
+[10] S. Holail et al., “AFDE-Net: Building change detection using attention-based feature differential enhancement for satellite imagery,” IEEE Geoscience and Remote Sensing Letters, vol. 20, 2023.
