@@ -89,6 +89,15 @@ All models are evaluated using:
 | EGCDNet    | 0.8286     | 0.8298 | 0.8242 | 0.8143 | 0.7009 | 0.9868   | 71.7       | 0.6217       |
 | MSNet      | 0.8443     | 0.8048 | 0.8241 | 0.8148 | 0.7008 | 0.9715   | 10.1       | 0.6639       |
 
+## Qualitative Evaluation
+
+### EGY-BCD Visual Comparison
+
+![EGY-BCD Results](images/EGY_BCD.png)
+
+### LEVIR-CD Visual Comparison
+
+![LEVIR-CD Results](images/LEVIR_CD.png)
 
 ## References
 
