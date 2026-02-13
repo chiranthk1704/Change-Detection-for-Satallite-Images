@@ -95,17 +95,16 @@ All models are evaluated using:
 
 ### EGY-BCD Visual Results
 
-<p align="center">
-  <img src="images/images/EGY_BCD.png" width="48%" />
-  <img src="images/tnpnetc" width="48%" />
-</p>
+![EGY-BCD Result 1](images/EGY_BCD.png)
+
+![EGY-BCD Result 2](images/tnpnetc.png)
+
 
 ### LEVIR-CD Visual Results
 
-<p align="center">
-  <img src="images/LEVIR_CD.png" width="48%" />
-  <img src="images/tnpnetc.png" width="48%" />
-</p>
+![LEVIR-CD Result 1](images/LEVIR_CD.png)
+
+![LEVIR-CD Result 2](images/tnpnetc.png)
 
 
 
