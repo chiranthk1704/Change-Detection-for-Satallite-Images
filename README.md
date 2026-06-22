@@ -1,5 +1,5 @@
 # Change Detection in Bi-Temporal Satellite Images
-## The proposed model developed in this work is currently under review at the IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE JSTARS). Full architectural details and implementation will be released after the review process is complete.
+## The proposed model developed in this work is currently under review at the Under review at Elsevier Results in Engineering. Full architectural details and implementation will be released after the review process is complete.
 ## Overview
 
 This repository focuses on bi-temporal satellite image change detection using deep learning techniques.
